@@ -7,6 +7,10 @@ const button = document.querySelector(".button");
 const userReuslt = document.querySelector(".user-number");
 const cpuReuslt = document.querySelector(".CPU-number");
 const winner = document.querySelector(".winner");
+const point = document.querySelector(".point");
+let win = 0;
+let lost = 0;
+let draw = 0; 
 
 button.addEventListener ( 'click', function() {
     let numberUser = Math.floor(Math.random() * 6) + 1;
@@ -16,9 +20,17 @@ button.addEventListener ( 'click', function() {
 
     if (numberUser > numberCpu) {
         winner.innerHTML = "HAI VINTO";
+        win += 1;
+        point.innerHTML = win + "-" + draw + "-" + lost;
     } else if (numberUser < numberCpu) {
         winner.innerHTML = "HAI PERSO";
+        lost += 1;
+        point.innerHTML = win + "-" + draw + "-" + lost;
+
     } else {
         winner.innerHTML = "HAI PAREGGIATO";
+        draw += 1;
+        point.innerHTML = win + "-" + draw + "-" + lost;
+
     }
  });
