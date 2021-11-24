@@ -18,7 +18,7 @@ buttonControl.addEventListener ( 'click', function() {
     }
     
     if (check==1) {
-        answersCheck.innerHTML = "email " + emailUser.value.toLowerCase() + " presente nel database";
+        answersCheck.innerHTML = "l'email: " + emailUser.value.toLowerCase() + " presente nel database";
     } else {
         answersCheck.innerHTML = "email " + emailUser.value.toLowerCase() + " non presente nel database";
     }
