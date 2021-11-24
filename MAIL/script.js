@@ -18,10 +18,8 @@ buttonControl.addEventListener ( 'click', function() {
     }
     
     if (check==1) {
-        console.log("email presente nel database");
         answersCheck.innerHTML = "email " + emailUser.value.toLowerCase() + " presente nel database";
     } else {
-        console.log("email non presente nel database");
         answersCheck.innerHTML = "email " + emailUser.value.toLowerCase() + " non presente nel database";
     }
 });
